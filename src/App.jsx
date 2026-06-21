@@ -181,6 +181,8 @@ export default function CarbonTracker() {
  
   return (
     <div
+      role="main"
+      aria-label="Carbon Footprint Tracker"
       style={{
         minHeight: "100vh",
         background: `linear-gradient(160deg, ${palette.forest} 0%, ${palette.moss} 60%, ${palette.sage} 100%)`,
@@ -325,6 +327,8 @@ export default function CarbonTracker() {
                   <button
                     key={i}
                     onClick={() => setSelected(opt.value)}
+                    aria-label={`Select ${opt.label}`}
+                    aria-pressed={selected === opt.value}
                     style={{
                       background:
                         selected === opt.value
