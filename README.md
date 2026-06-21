@@ -35,4 +35,4 @@ npm install && npm start
 
 ## Author
 **Abirami** — CSE Undergrad + IIT Madras BS Data Science  
-[LinkedIn](www.linkedin.com/in/abirami-g-9b5163369) · [Blog Post](abiramicodes.hashnode.dev)
+[LinkedIn](https://www.linkedin.com/in/abirami-g-9b5163369) · [Blog Post](https://abiramicodes.hashnode.dev)
