@@ -35,4 +35,4 @@ npm install && npm start
 
 ## Author
 **Abirami** — CSE Undergrad + IIT Madras BS Data Science  
-[LinkedIn](your-link) · [Blog Post](your-hashnode-link)
+[LinkedIn](https://www.linkedin.com/posts/abirami-g-9b5163369_promptwars-googlefordevelopers-buildwithai-ugcPost-7474492282772160512-4z9y/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFtTW9kBWqqptTOkW9pB--iFC85x7Tz-z8s) · [Blog Post](https://abiramicodes.hashnode.dev/how-i-built-a-carbon-footprint-tracker-in-one-prompt-session-promptwars-build-log)
