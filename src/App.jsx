@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+ 
 const palette = {
   forest: "#1B3A2D",
   moss: "#2D5A3D",
@@ -12,7 +12,7 @@ const palette = {
   sky: "#E8F4F0",
   ink: "#0F2019",
 };
-
+ 
 const questions = [
   {
     id: "transport",
@@ -75,7 +75,7 @@ const questions = [
     ],
   },
 ];
-
+ 
 const tips = {
   transport: [
     "Try carpooling or switching to public transit 2 days/week — saves ~400 kg CO₂/year.",
@@ -103,7 +103,7 @@ const tips = {
     "Repair instead of replace — skills like sewing or electronics repair help.",
   ],
 };
-
+ 
 const getGrade = (total) => {
   if (total < 5) return { grade: "A", label: "Climate Champion", color: palette.leaf };
   if (total < 8) return { grade: "B", label: "Eco Aware", color: "#9BC67A" };
@@ -111,7 +111,7 @@ const getGrade = (total) => {
   if (total < 16) return { grade: "D", label: "High Impact", color: palette.alert };
   return { grade: "F", label: "Critical Zone", color: "#C0392B" };
 };
-
+ 
 const Bar = ({ value, max, color }) => (
   <div style={{ background: "#D4E8DC", borderRadius: 4, height: 10, overflow: "hidden", flex: 1 }}>
     <div
@@ -125,7 +125,7 @@ const Bar = ({ value, max, color }) => (
     />
   </div>
 );
-
+ 
 export default function CarbonTracker() {
   const [step, setStep] = useState("intro");
   const [qIndex, setQIndex] = useState(0);
@@ -133,10 +133,10 @@ export default function CarbonTracker() {
   const [selected, setSelected] = useState(null);
   const [animIn, setAnimIn] = useState(true);
   const [actions, setActions] = useState({});
-
+ 
   const total = Object.values(answers).reduce((a, b) => a + b, 0);
   const grade = getGrade(total);
-
+ 
   const goNext = () => {
     if (selected === null) return;
     const q = questions[qIndex];
@@ -152,7 +152,7 @@ export default function CarbonTracker() {
       }
     }, 250);
   };
-
+ 
   const restart = () => {
     setStep("intro");
     setQIndex(0);
@@ -161,16 +161,16 @@ export default function CarbonTracker() {
     setAnimIn(true);
     setActions({});
   };
-
+ 
   const toggleAction = (cat, tip) => {
     setActions((prev) => {
       const key = `${cat}-${tip}`;
       return { ...prev, [key]: !prev[key] };
     });
   };
-
+ 
   const completedCount = Object.values(actions).filter(Boolean).length;
-
+ 
   const categoryColors = {
     transport: "#7BC67A",
     flights: "#5C8A6A",
@@ -178,7 +178,7 @@ export default function CarbonTracker() {
     energy: "#C4A882",
     shopping: "#E07B4A",
   };
-
+ 
   return (
     <div
       style={{
@@ -260,7 +260,7 @@ export default function CarbonTracker() {
             </button>
           </div>
         )}
-
+ 
         {/* QUIZ */}
         {step === "quiz" && (
           <div
@@ -285,7 +285,7 @@ export default function CarbonTracker() {
                 />
               ))}
             </div>
-
+ 
             <div
               style={{
                 background: "rgba(255,255,255,0.08)",
@@ -319,7 +319,7 @@ export default function CarbonTracker() {
               >
                 {questions[qIndex].question}
               </h2>
-
+ 
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 {questions[qIndex].options.map((opt, i) => (
                   <button
@@ -350,7 +350,7 @@ export default function CarbonTracker() {
                   </button>
                 ))}
               </div>
-
+ 
               <button
                 onClick={goNext}
                 disabled={selected === null}
@@ -371,13 +371,13 @@ export default function CarbonTracker() {
                 {qIndex + 1 === questions.length ? "See My Results" : "Next →"}
               </button>
             </div>
-
+ 
             <p style={{ color: "rgba(255,255,255,0.3)", fontSize: 12, textAlign: "center", marginTop: 12 }}>
               Question {qIndex + 1} of {questions.length}
             </p>
           </div>
         )}
-
+ 
         {/* RESULT */}
         {step === "result" && (
           <div>
@@ -420,7 +420,7 @@ export default function CarbonTracker() {
                 Global average is ~4.7 tonnes. Target: under 2 tonnes by 2050.
               </p>
             </div>
-
+ 
             {/* Breakdown */}
             <div
               style={{
@@ -451,7 +451,7 @@ export default function CarbonTracker() {
                 </div>
               ))}
             </div>
-
+ 
             {/* Actions */}
             <div
               style={{
@@ -527,7 +527,7 @@ export default function CarbonTracker() {
                 </div>
               ))}
             </div>
-
+ 
             {/* Potential savings */}
             {completedCount > 0 && (
               <div
@@ -551,7 +551,7 @@ export default function CarbonTracker() {
                 </div>
               </div>
             )}
-
+ 
             <button
               onClick={restart}
               style={{
