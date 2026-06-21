@@ -6,7 +6,7 @@ A personal carbon footprint calculator built in ~45 minutes
 using vibe coding for **Google PromptWars 2026**.
 
 ## Live Demo
-[▶ Try it here](your-deployed-link)
+[▶ Try it here](https://carbon-footprint-cal-ivjt.bolt.host)
 
 ## What It Does
 - 5-question lifestyle quiz (transport, flights, diet, energy, shopping)
