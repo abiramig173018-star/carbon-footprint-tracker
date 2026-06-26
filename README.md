@@ -34,5 +34,5 @@ npm install && npm start
 | Shopping | Carbon Trust Study |
 
 ## Author
-**Abirami** — CSE Undergrad + IIT Madras BS Data Science  
+**Abirami** — CSE Undergrad 
 [LinkedIn](https://www.linkedin.com/in/abirami-g-9b5163369) · [Blog Post](https://abiramicodes.hashnode.dev)
